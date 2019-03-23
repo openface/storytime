@@ -3,6 +3,7 @@ class Game
   def initialize(directory,meta)
     @directory = directory
     @meta = meta
+    @stack = []
   end
 
   def start
@@ -10,9 +11,11 @@ class Game
   end
 
   def play_story(filename)
+    @stack << filename
     story_yml = YAML.load_file("#{@directory}/#{filename}.yml")
     puts CLEAR
-    puts story_yml['story']
+    puts story_yml['content']
+    puts
 
     cli = HighLine.new
     cli.choose do |menu|

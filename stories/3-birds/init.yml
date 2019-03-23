@@ -1,9 +1,12 @@
-story: |
+content: |
   Once upon a time, there were 3 baby birds.  These birds were not like any other
   birds.  They were special birds who enjoyed long days of slumber, and being
   fed worms by their mother.
 
-  As time passed, the birds grew up and were no longer babies.
+  As time passed, the birds grew up and were no longer babies.  Each of the
+  birds had something very important to say.
+
+  Select which bird to hear what they have to say.
 
 options:
   first_bird: First Bird
