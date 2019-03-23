@@ -1,0 +1,11 @@
+story: |
+  Once upon a time, there were 3 baby birds.  These birds were not like any other
+  birds.  They were special birds who enjoyed long days of slumber, and being
+  fed worms by their mother.
+
+  As time passed, the birds grew up and were no longer babies.
+
+options:
+  first_bird: First Bird
+  second_bird: Second Bird
+  third_bird: Third Bird

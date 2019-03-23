@@ -1,0 +1,5 @@
+story: |
+  The first bird said, "My instincts tell me to go north."
+
+options:
+  init: "Go Back"
