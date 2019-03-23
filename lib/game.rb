@@ -1,5 +1,8 @@
 class Game
 
+  GAME_START = 'start'
+  GAME_END = 'end'
+
   def initialize(directory)
     @directory = directory
     @meta = YAML.load_file("#{@directory}/story.yml")
@@ -7,44 +10,42 @@ class Game
   end
 
   def start
-    play_story 'init'
+    play_story GAME_START
   end
 
-  def play_story(filename)
+  def play_story(part)
     # Push selection to story stack
-    @stack << filename
+    @last_part = @stack.pop
+    @stack << part
 
-    story_yml = YAML.load_file("#{@directory}/#{filename}.yml")
+    story_yml = YAML.load_file("#{@directory}/#{part}.yml")
     puts CLEAR
     #puts @stack.inspect
     puts
     puts story_yml['content']
     puts
 
-    if filename == 'end'
-      # end story
-      exit
-    else
-      # navigate to next part of the story
+    exit if part == GAME_END
 
-      prompt = TTY::Prompt.new
-      
-      if story_yml['choices']
-        # prompt user with choices
-        next_story = prompt.select("Please select: ") do |menu|
-          menu.enum '.'
-          story_yml['choices'].each do |choice|
-            menu.choice choice[1], choice[0]
-          end
+    # navigate to next part of the story
+
+    prompt = TTY::Prompt.new
+
+    if story_yml['choices']
+      # prompt user with choices
+      next_part = prompt.select("Please select: ") do |menu|
+        menu.enum '.'
+        story_yml['choices'].each do |choice|
+          menu.choice choice[1], choice[0]
         end
-      else
-        # no choices defined
-        next_story = @stack.pop(2).first
-        prompt.keypress("Press any key to go back")
       end
-
-      play_story(next_story)
+    else
+      # no choices defined
+      next_part = @last_part
+      prompt.keypress("Press any key to go back...")
     end
+
+    play_story(next_part)
   end
 
 end
