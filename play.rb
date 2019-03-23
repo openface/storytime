@@ -11,17 +11,15 @@ puts
 puts "Welcome to Storytime!"
 puts
 
-cli = HighLine.new
-cli.choose do |menu|
-  menu.index_suffix = ") "
-  menu.character = true
-  menu.prompt = "Select a story to play: "
+prompt = TTY::Prompt.new
 
+story_directory = prompt.select("Select a story to play: ") do |menu|
+  menu.enum '.'
   Dir.glob("stories/*/story.yml").each do |story_yml|
     story_directory = File.dirname story_yml
     story_meta = YAML.load_file story_yml
-    menu.choice(story_meta['title']) do
-      Game.new(story_directory,story_meta).start
-    end
+    menu.choice story_meta['title'], story_directory
   end
 end
+
+Game.new(story_directory).start
