@@ -20,14 +20,14 @@ class Game
     puts
 
     prompt = TTY::Prompt.new
-    selected_option = prompt.select("Please select: ") do |menu|
+    selected_choice = prompt.select("Please select: ") do |menu|
       menu.enum '.'
-      story_yml['options'].each do |option|
-        menu.choice option[1], option[0]
+      story_yml['choices'].each do |choice|
+        menu.choice choice[1], choice[0]
       end
     end
 
-    play_story(selected_option)
+    play_story(selected_choice)
   end
 
 end

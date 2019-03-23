@@ -21,5 +21,5 @@ Stories follow the following rules:
 
 - A story YAML file contains these keys:
   - `content` The actual story part itself.
-  - `options` A set of options presented to the user.  Each option has a key
+  - `choices` A set of options presented to the user.  Each option has a key
     that corresponds to a different story part by name.

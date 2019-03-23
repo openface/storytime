@@ -8,7 +8,7 @@ content: |
 
   Select which bird to hear what they have to say.
 
-options:
+choices:
   first_bird: First Bird
   second_bird: Second Bird
   third_bird: Third Bird
