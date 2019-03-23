@@ -1,0 +1,6 @@
+content: |
+  You are standing among the buildings of an abandoned village.
+  There is a strange glowing crystal lying on the ground.
+
+choices:
+  ocean: Go back towards the ocean

@@ -1,0 +1,8 @@
+content: |
+  Your are in a forest full of lush trees.
+  There is a path that splits. To the west lies your home. To the east are the mountains. Back to the south is a lake.
+
+choices:
+  home: Go West towards Home
+  mountains: Go East towards Mountains
+  start: Go South towards the Lake

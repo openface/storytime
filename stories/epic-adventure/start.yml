@@ -1,0 +1,6 @@
+content: |
+  You are at a beautiful lake surrounded by trees.
+  A trail runs to the north from here.
+
+choices:
+  forest: Go North Into The Forest

@@ -1,0 +1,7 @@
+content: |
+  You are standing by the ocean. It is overcast and cloudy here. Seagulls circle overhead.
+  Further east along the beach you can see some buildings. Back to the west lies the pass.
+
+choices:
+  pass: Back to the west towards the pass
+  village: Go east towards the village  

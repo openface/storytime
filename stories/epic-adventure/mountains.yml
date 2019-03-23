@@ -1,0 +1,7 @@
+content: |
+  These are the mountains. From up here you can see the valley in which you live.
+  Further to the east is the pass that leads to the ocean. Back west is the forest.
+
+choices:
+  forest: Go west towards the Forest
+  pass: Go east towards the Pass

@@ -1,0 +1,7 @@
+content: |
+  You are standing in the main room of your house.
+  The inside of your house is simple but clean and quiet. You have spent many happy hours here. The study is in the north room.
+
+choices:
+  home_study: Go into the Study
+  home: Go back to entrance of your home.

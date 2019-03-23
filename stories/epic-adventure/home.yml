@@ -1,0 +1,7 @@
+content: |
+  This is your home. It is a happy house.
+  To the east is the path in the forest. If you go west you will enter your house.
+
+choices:
+  forest: Go East back to the Forest
+  home_main: Go West to enter your house

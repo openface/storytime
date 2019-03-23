@@ -1,0 +1,6 @@
+content: |
+  You are in your study. It is a clean room with a desk and windows facing outside.
+  Your study is where your work gets done. There is a letter on your desk.
+
+choices:
+  home_main: Go back to main room in your house.

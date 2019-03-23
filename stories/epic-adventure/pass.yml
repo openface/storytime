@@ -1,0 +1,7 @@
+content: |
+  This is the pass that leads to the ocean. It is rocky terrain with huge stone walls all around.
+  To the east is the ocean. Back west lies the mountains. You can smell the ocean.
+
+choices:
+  mountains: Go back west towards the mountains
+  ocean: Go east towards the ocean
