@@ -20,10 +20,15 @@ class Game
 
     story_yml = YAML.load_file("#{@directory}/#{part}.yml")
     puts CLEAR
+
     #puts @stack.inspect
     puts
     puts story_yml['content']
     puts
+
+    # Speak
+    #talker = Mac::Say.new(voice: :alex, rate: 200)
+    #talker.say string: story_yml['content']
 
     exit if part == GAME_END
 
