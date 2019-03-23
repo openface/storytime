@@ -16,18 +16,35 @@ class Game
 
     story_yml = YAML.load_file("#{@directory}/#{filename}.yml")
     puts CLEAR
+    #puts @stack.inspect
+    puts
     puts story_yml['content']
     puts
 
-    prompt = TTY::Prompt.new
-    selected_choice = prompt.select("Please select: ") do |menu|
-      menu.enum '.'
-      story_yml['choices'].each do |choice|
-        menu.choice choice[1], choice[0]
-      end
-    end
+    if filename == 'end'
+      # end story
+      exit
+    else
+      # navigate to next part of the story
 
-    play_story(selected_choice)
+      prompt = TTY::Prompt.new
+      
+      if story_yml['choices']
+        # prompt user with choices
+        next_story = prompt.select("Please select: ") do |menu|
+          menu.enum '.'
+          story_yml['choices'].each do |choice|
+            menu.choice choice[1], choice[0]
+          end
+        end
+      else
+        # no choices defined
+        next_story = @stack.pop(2).first
+        prompt.keypress("Press any key to go back")
+      end
+
+      play_story(next_story)
+    end
   end
 
 end

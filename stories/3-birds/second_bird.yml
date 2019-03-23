@@ -1,5 +1,2 @@
 content: |
   The second bird said, "My instincts tell me to go East".
-
-choices:
-  init: "Go Back"

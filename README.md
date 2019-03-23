@@ -19,7 +19,8 @@ Stories follow the following rules:
   into the story), and an `end.yml` (the final ending of the story).  All other
   YAML files are parts of the story.
 
-- A story YAML file contains these keys:
+- A story YAML file can contain these keys:
   - `content` The actual story part itself.
   - `choices` A set of options presented to the user.  Each option has a key
-    that corresponds to a different story part by name.
+    that corresponds to a different story part by name.  If `choices` is not
+    defined, it is considered a dead-end, and user is sent back one part.
