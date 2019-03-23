@@ -15,7 +15,7 @@ Stories follow the following rules:
 - A story is a comprised of a set of YAML files contained in the stories/
   directory.
 
-- A story must have a `story.yml` (story metadata), `init.yml` (the entrypoint
+- A story must have a `story.yml` (story metadata), `start.yml` (the entrypoint
   into the story), and an `end.yml` (the final ending of the story).  All other
   YAML files are parts of the story.
 
