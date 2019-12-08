@@ -1,0 +1,8 @@
+content: |
+  You come across an old wizard wearing blue garmets.  He is scruffy and worn and looks to be over
+  a hundred years old.  Please, asks the wizards, will you help me find my missing crystal?
+  If you find it, be sure not to touch it.  If you do, a terrible curse will be upon you.
+
+choices:
+  forest: Go west towards the Forest
+  pass: Go east towards the Pass

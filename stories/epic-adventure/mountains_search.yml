@@ -1,0 +1,8 @@
+content: |
+  You search around the area and find nothing.  Then suddenly in the distance
+  you hear a faint whisper.  Is someone is calling your name?
+
+choices:
+  mountains_wizard: Go towards the voice
+  forest: Run away west towards the Forest
+  pass: Run away east towards the Pass

@@ -1,0 +1,6 @@
+content: |
+  The letter reads...  You are in great danger.  You must go to
+  the mountains and seek help from the wizard.
+
+choices:
+  home_main: Go back to main room in your house
