@@ -27,8 +27,8 @@ class Game
     puts
 
     # Speak
-    #talker = Mac::Say.new(voice: :alex, rate: 200)
-    #talker.say string: story_yml['content']
+    talker = Mac::Say.new(voice: :alex, rate: 200)
+    talker.say string: story_yml['content']
 
     exit if part == GAME_END
 

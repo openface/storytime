@@ -3,4 +3,5 @@ content: |
   Your study is where your work gets done. There is a letter on your desk.
 
 choices:
-  home_main: Go back to main room in your house.
+  home_main: Go back to main room in your house
+  study_open_letter: Open the letter on the desk

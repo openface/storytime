@@ -5,3 +5,4 @@ content: |
 choices:
   forest: Go west towards the Forest
   pass: Go east towards the Pass
+  mountains_search: Search this area
