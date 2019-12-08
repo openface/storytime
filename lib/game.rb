@@ -27,8 +27,10 @@ class Game
     puts
 
     # Speak
-    talker = Mac::Say.new(voice: :alex, rate: 200)
-    talker.say string: story_yml['content']
+    unless ENV['NOTALK']
+      talker = Mac::Say.new(voice: :alex, rate: 200)
+      talker.say string: story_yml['content']
+    end
 
     exit if part == GAME_END
 
@@ -44,6 +46,11 @@ class Game
           menu.choice choice[1], choice[0]
         end
       end
+    elsif story_yml['end']
+      puts
+      puts story_yml['end']
+      puts
+      exit
     else
       # no choices defined
       next_part = @last_part

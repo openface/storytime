@@ -1,5 +1,4 @@
 content: |
   The third bird said, "My instincts too but it doesn't tell me where to go!"
 
-choices:
-  end: "The End"
+end: The End

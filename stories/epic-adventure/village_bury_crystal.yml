@@ -1,0 +1,8 @@
+content: |
+  Your senses tell you playing with this mysterious object might not
+  be a good idea.  You decide to kick some dirt over the crystal and
+  move on.
+
+choices:
+  ocean: Go back towards the ocean
+  end: Explore the village
